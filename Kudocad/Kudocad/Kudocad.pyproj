@@ -4,6 +4,7 @@
     <Name>Kudocad</Name>
     <RootNamespace>Kudocad</RootNamespace>
     <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <TestFramework>Pytest</TestFramework>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -30,6 +31,14 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Kudocad\Quickstart\admin.py" />
+    <Compile Include="Kudocad\Quickstart\apps.py" />
+    <Compile Include="Kudocad\Quickstart\migrations\__init__.py" />
+    <Compile Include="Kudocad\Quickstart\models.py" />
+    <Compile Include="Kudocad\Quickstart\serializers.py" />
+    <Compile Include="Kudocad\Quickstart\tests.py" />
+    <Compile Include="Kudocad\Quickstart\views.py" />
+    <Compile Include="Kudocad\Quickstart\__init__.py" />
     <Compile Include="manage.py" />
     <Compile Include="Kudocad\__init__.py" />
     <Compile Include="Kudocad\settings.py" />
@@ -37,10 +46,15 @@
     <Compile Include="Kudocad\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Kudocad\Quickstart\templates\Quickstart\index.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Kudocad\" />
+    <Folder Include="Kudocad\Quickstart\" />
+    <Folder Include="Kudocad\Quickstart\migrations\" />
+    <Folder Include="Kudocad\Quickstart\templates\" />
+    <Folder Include="Kudocad\Quickstart\templates\Quickstart\" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
