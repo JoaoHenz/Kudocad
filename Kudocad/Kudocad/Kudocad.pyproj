@@ -31,7 +31,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Kudocad\management\commands\import_csv.py" />
+    <Compile Include="Kudocad\Quickstart\management\commands\import_csv.py" />
     <Compile Include="Kudocad\Quickstart\admin.py" />
     <Compile Include="Kudocad\Quickstart\apps.py" />
     <Compile Include="Kudocad\Quickstart\migrations\__init__.py" />
@@ -52,8 +52,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Kudocad\" />
-    <Folder Include="Kudocad\management\" />
-    <Folder Include="Kudocad\management\commands\" />
+    <Folder Include="Kudocad\Quickstart\management\" />
+    <Folder Include="Kudocad\Quickstart\management\commands\" />
     <Folder Include="Kudocad\Quickstart\" />
     <Folder Include="Kudocad\Quickstart\migrations\" />
     <Folder Include="Kudocad\Quickstart\templates\" />
