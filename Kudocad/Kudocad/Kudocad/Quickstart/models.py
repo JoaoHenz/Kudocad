@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Movie(models.Model):
     title = models.CharField(max_length=128)
     mpaa_rating = models.CharField(max_length=32)

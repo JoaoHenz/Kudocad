@@ -5,7 +5,6 @@ from Kudocad.Quickstart.models import Movie
 from Kudocad.Quickstart.serializers import GroupSerializer, MovieSerializer, UserSerializer
 
 
-
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all().order_by('-date_joined')
     serializer_class = UserSerializer
@@ -16,7 +15,7 @@ class GroupViewSet(viewsets.ModelViewSet):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
     permission_classes = [permissions.IsAuthenticated]
-    
+
 
 class MovieViewSet(viewsets.ModelViewSet):
     queryset = Movie.objects.all().order_by('title')

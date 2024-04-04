@@ -17,18 +17,17 @@ Including another URLconf
 """
 
 # Uncomment next two lines to enable admin:
-#from django.contrib import admin
-#from django.urls import path
-
-urlpatterns = [
-    # Uncomment the next line to enable the admin:
-    #path('admin/', admin.site.urls)
-]
-
-from django.urls import include, path
-from rest_framework import routers
+# from django.contrib import admin
+# from django.urls import path
 
 from Kudocad.Quickstart import views
+from rest_framework import routers
+from django.urls import include, path
+urlpatterns = [
+    # Uncomment the next line to enable the admin:
+    # path('admin/', admin.site.urls)
+]
+
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
