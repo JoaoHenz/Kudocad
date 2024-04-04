@@ -3,6 +3,7 @@ import pandas as pd
 import sqlite3
 from django.conf import settings
 
+
 class Command(BaseCommand):
     help = 'Loads csv data to db'
 
