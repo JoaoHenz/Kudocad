@@ -14,7 +14,7 @@ class Command(BaseCommand):
             con = sqlite3.connect(db_name)
             df = pd.read_csv('..\..\movies.csv')
             df.to_sql('Quickstart_movie', con, if_exists='replace')
-            self.stdout.write(self.style.SUCCESS('Data imported successfully'))
+            self.stdout.write('Data imported successfully')
         except Exception as e:
             print("An Error occurred", str(e))
             raise CommandError('Failed to import data: ' + str(e))
