@@ -1,7 +1,10 @@
 from django.db import models
+import uuid
 
 
 class Movie(models.Model):
+    public_id = models.UUIDField(
+        unique=True, editable=False, default=uuid.uuid4)
     title = models.CharField(max_length=128)
     mpaa_rating = models.CharField(max_length=32)
     budget = models.IntegerField()
