@@ -18,6 +18,8 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class MovieSerializer(serializers.ModelSerializer):
+    id = serializers.UUIDField(source='public_id')
+
     class Meta:
         model = Movie
-        fields = '__all__'
+        fields = [f.name for f in model._meta.fields if f.name not in ['public_id']]
