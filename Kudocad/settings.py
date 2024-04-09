@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'Kudocad.Quickstart'
+    'Kudocad.Quickstart',
+    'django_filters'
 ]
 
 # Middleware framework
