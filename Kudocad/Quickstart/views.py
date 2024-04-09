@@ -1,5 +1,6 @@
 from django.contrib.auth.models import Group, User
-from rest_framework import permissions, viewsets
+from rest_framework import filters, permissions, viewsets
+from django_filters.rest_framework import DjangoFilterBackend
 from Kudocad.Quickstart.models import Movie
 
 from Kudocad.Quickstart.serializers import GroupSerializer, MovieSerializer, UserSerializer
@@ -21,3 +22,8 @@ class MovieViewSet(viewsets.ModelViewSet):
     queryset = Movie.objects.all().order_by('title')
     serializer_class = MovieSerializer
     permission_classes = [permissions.IsAuthenticated]
+    filter_backends = [filters.OrderingFilter, DjangoFilterBackend]
+    filterset_fields = [
+        f.name for f in Movie._meta.fields if f.name not in ['id']]
+    ordering_fields = [
+        f.name for f in Movie._meta.fields if f.name not in ['id']]
