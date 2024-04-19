@@ -1,0 +1,7 @@
+version: '1'
+services:
+  kudocad:
+    build: ./
+    image: kudocad
+    ports:
+      - "7010:7010"
