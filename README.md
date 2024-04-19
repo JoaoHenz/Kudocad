@@ -7,3 +7,12 @@
 
 # Dataset
 Using this [free movies dataset](https://data.world/jamesgaskin/movies)
+
+# Running with Docker
+`docker compose up -d`<br>
+Build and run the app in the background.
+
+`docker compose down`<br>
+Delete everything.
+
+Access localhost:7010
