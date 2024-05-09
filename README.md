@@ -16,3 +16,11 @@ Build and run the app in the background.
 Delete everything.
 
 Access localhost:7010
+
+# Running with Kubernetes
+
+`docker-compose up --no-start`<br>
+`kubectl apply -f k8s/deployment.yaml`<br>
+`kubectl apply -f k8s/service.yaml`
+
+Access localhost:30080
