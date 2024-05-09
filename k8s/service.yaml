@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kudocad-service
+spec:
+  selector:
+    app: kudocad
+  ports:
+  - name: service-port
+    protocol: TCP
+    port: 80
+    targetPort: kudocad-port
+    nodePort: 30080
+  type: NodePort
