@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kudocad-deployment
+  labels:
+    app: kudocad
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: kudocad
+  template:
+    metadata:
+      labels:
+        app: kudocad
+    spec:
+      containers:
+      - name: kudocad
+        image: kudocad:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 7010
+          name: kudocad-port
