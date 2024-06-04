@@ -10,5 +10,4 @@ spec:
     protocol: TCP
     port: 80
     targetPort: kudocad-port
-    nodePort: 30080
-  type: NodePort
+  type: LoadBalancer

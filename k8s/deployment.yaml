@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: kudocad
-        image: kudocad:latest
-        imagePullPolicy: IfNotPresent
+        image: joaohenzpoatek/kudocad:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 7010
           name: kudocad-port
