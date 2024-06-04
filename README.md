@@ -24,3 +24,10 @@ Access localhost:7010
 `kubectl apply -f k8s/service.yaml`
 
 Access localhost:30080
+
+# How to Release
+`docker-compose up --no-start`<br>
+`docker tag kudocad:latest joaohenzpoatek/kudocad:2`<br>
+`docker push joaohenzpoatek/kudocad:2`<br>
+Log in Azure<br>
+`kubectl set image deployment/kudocad-deployment kudocad=joaohenzpoatek/kudocad:latest`
