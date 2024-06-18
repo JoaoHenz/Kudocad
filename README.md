@@ -27,7 +27,7 @@ Access localhost:30080
 
 # How to Release
 `docker-compose up --no-start`<br>
-`docker tag kudocad:latest joaohenzpoatek/kudocad:2`<br>
-`docker push joaohenzpoatek/kudocad:2`<br>
+`docker tag kudocad:latest joaohenzpoatek/kudocad:latest`<br>
+`docker push joaohenzpoatek/kudocad:latest`<br>
 Log in Azure<br>
 `kubectl set image deployment/kudocad-deployment kudocad=joaohenzpoatek/kudocad:latest`
