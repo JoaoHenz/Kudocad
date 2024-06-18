@@ -11,14 +11,15 @@ resource "azurerm_kubernetes_cluster" "example" {
   dns_prefix          = "KudocadCluster-dns"
 
   default_node_pool {
-    name                = "agentpool"
-    node_count          = 2
-    vm_size             = "Standard_DS2_v2"
-    max_pods            = 110
-    min_count           = 2
-    max_count           = 5
-    enable_auto_scaling = true
-    os_disk_size_gb     = 128
+    name                  = "agentpool"
+    node_count            = 2
+    vm_size               = "Standard_DS2_v2"
+    max_pods              = 110
+    min_count             = 2
+    max_count             = 5
+    enable_auto_scaling   = true
+    os_disk_size_gb       = 128
+    enable_node_public_ip = true
   }
 
   identity {
